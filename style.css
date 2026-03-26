@@ -2126,19 +2126,20 @@ grid-row:auto;
     text-align: left;
   }
 }
-/* ================= MOBILE RESPONSIVE (360px → 520px) ================= */
+/* ================= FULL MOBILE RESPONSIVE (360px → 520px) ================= */
 
 @media (max-width: 520px) {
 
   body {
-    padding: 0;
+    display: block;
   }
 
   .page {
-    padding: 0 20px;
+    padding: 0 18px;
   }
 
-  /* HEADER */
+  /* ================= HEADER ================= */
+
   .header {
     margin: 20px 0;
   }
@@ -2148,15 +2149,16 @@ grid-row:auto;
   }
 
   .menu-btn {
-    font-size: 10px;
-    padding: 6px 12px;
+    font-size: 11px;
+    padding: 6px 14px;
   }
 
-  /* HERO */
+  /* ================= HERO ================= */
+
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 20px;
+    gap: 25px;
   }
 
   .hero-text h1 {
@@ -2168,39 +2170,51 @@ grid-row:auto;
     max-width: 100%;
   }
 
+  .cta {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+
   .hero-img {
     width: 100%;
-    height: 320px;
-    margin-top: 0;
+    height: 300px;
     border-radius: 20px;
+    margin-top: 0;
   }
 
   .stats {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 12px;
+  }
+
+  .stat {
+    font-size: 12px;
   }
 
   .stat strong {
-    font-size: 20px;
+    font-size: 18px;
   }
 
-  /* FEATURES */
+  /* ================= FEATURES ================= */
+
   .features {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
-  /* TICKER */
+  /* ================= TICKER ================= */
+
   .ticker-item {
     font-size: 22px;
     gap: 10px;
   }
 
-  /* CUSTOM HERO */
+  /* ================= CUSTOM HERO ================= */
+
   .custom-hero {
-    padding: 40px 20px;
+    padding: 40px 10px;
   }
 
   .custom-hero-container {
@@ -2224,19 +2238,37 @@ grid-row:auto;
     margin-top: 20px;
   }
 
-  /* PROJECTS */
+  /* ================= PROJECTS ================= */
+
   .projects-header h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .project-item {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     padding: 50px 0;
   }
 
+  /* IMAGE FIRST */
+  .project-image {
+    order: 1;
+  }
+
+  /* TEXT SECOND */
+  .project-info {
+    order: 2;
+    text-align: left;
+  }
+
+  /* BUTTON LAST */
+  .project-info .uiverse {
+    margin-top: 10px;
+  }
+
   .project-info h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .project-info p {
@@ -2244,12 +2276,15 @@ grid-row:auto;
   }
 
   .project-image img {
+    width: 100%;
     height: auto;
+    border-radius: 12px;
   }
 
-  /* APPS */
+  /* ================= APPS ================= */
+
   .apps-intro h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .apps-wrapper {
@@ -2258,50 +2293,79 @@ grid-row:auto;
   }
 
   .app-media {
-    height: 300px;
+    height: 280px;
   }
 
-  /* LOGOFOLIO */
+  /* ================= LOGOFOLIO ================= */
+
   .logofolio-intro h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
-  /* DESIGNER SECTION */
+  /* ================= GRAPHIC DESIGN ================= */
+
   .designer-header h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .designer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .text-1 { order: 1; }
+  .text-2 { order: 2; }
+  .text-3 { order: 3; }
+  .text-4 { order: 4; }
+
+  .designer-image {
+    order: 5;
   }
 
   .designer-image img {
-    height: 300px;
+    width: 100%;
+    height: auto;
+    max-height: 320px;
   }
 
-  /* CASE STUDY */
+  .big-number {
+    font-size: 42px;
+  }
+
+  .designer-text h4 {
+    font-size: 18px;
+  }
+
+  .designer-text p {
+    font-size: 14px;
+  }
+
+  /* ================= CASE STUDY ================= */
+
   .case-container {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .case-content {
-    max-width: 100%;
+  .case-preview img {
+    height: 150px;
   }
 
-  /* BRAND */
+  /* ================= BRAND ================= */
+
   .title {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .brand-grid {
     grid-template-columns: 1fr;
   }
 
-  /* ART */
+  /* ================= ART ================= */
+
   .art-title h2 {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .art-grid {
@@ -2309,9 +2373,14 @@ grid-row:auto;
     gap: 20px;
   }
 
-  /* FOOTER */
+  /* ================= FOOTER ================= */
+
   .footer-top h1 {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .footer-top p {
+    font-size: 14px;
   }
 
   .footer-bottom {
@@ -2323,4 +2392,5 @@ grid-row:auto;
   .services {
     text-align: left;
   }
+
 }
